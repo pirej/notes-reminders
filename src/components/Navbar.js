@@ -1,9 +1,8 @@
 import "./Navbar.css";
-import { useContext } from "react";
-import { ThemeContext } from "../context/ThemeContext";
+import { useTheme } from "../hooks/useTheme";
 
 function Navbar() {
-  const { color, changeColor } = useContext(ThemeContext);
+  const { color, changeColor } = useTheme();
 
   return (
     <div className="Nav" style={{ color: color }}>
