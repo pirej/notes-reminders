@@ -5,8 +5,8 @@ export const ThemeContext = createContext();
 const themeReducer = (state, action) => {
   switch (action.type) {
     case "CHANGE_COLOR":
-      return { ...state, color: "green" };
-    // return { ...state, color: action.payload };
+      // return { ...state, color: "green" };
+      return { ...state, color: action.payload };
     default:
       return state;
   }
